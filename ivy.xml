@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info
+        organisation=""
+        module="dorm-mgmt"
+        status="integration">
+	</info>
+	<configurations defaultconfmapping="build->default;compile->compile(*),master(*);test,runtime->runtime(*),master(*)">
+        <conf name="build"/>
+        <conf name="compile"/>
+        <conf name="test" extends="compile"/>
+        <conf name="runtime" extends="compile"/>
+    </configurations>
+    <dependencies>		
+		<dependency org="org.springframework" name="spring-web" rev="3.1.1.RELEASE"/>
+		<dependency org="org.springframework" name="spring-webmvc" rev="3.1.1.RELEASE"/>
+		<dependency org="org.hibernate" name="hibernate-core" rev="3.5.3-Final" conf="runtime" />
+		<dependency org="org.hibernate" name="hibernate-annotations" rev="3.5.3-Final" conf="runtime" />
+		<dependency org="org.hibernate" name="hibernate-validator" rev="4.2.0.Final"/>
+		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.6.3" conf="runtime" />
+		<dependency org="org.hsqldb" name="hsqldb" rev="2.2.4" conf="runtime" />
+		<dependency org="commons-dbcp" name="commons-dbcp" rev="1.4" conf="runtime" />
+		<dependency org="javassist" name="javassist" rev="3.7.1.GA" conf="runtime" />
+		<dependency org="jstl" name="jstl" rev="1.2" conf="runtime" />
+		<dependency org="org.codehaus.jackson" name="jackson-mapper-asl" rev="1.4.2" />
+		<dependency org="org.json" name="json" rev="20090211" />
+		<dependency org="org.apache.velocity" name="velocity" rev="1.7"/>
+		<dependency org="org.apache.poi" name="poi-scratchpad" rev="3.8-beta2"/>
+	</dependencies>
+</ivy-module>
