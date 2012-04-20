@@ -13,6 +13,47 @@
     
     <bean id="appCtxHolder" class="com.smartworks.platform.AppContextHolder"  />
     
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" lazy-init="false">
+        <property name="dataSource" ref="dataSource" />
+        <property name="schemaUpdate">
+			<value>true</value>
+		</property>
+        <property name="packagesToScan">
+            <list>
+                <value>com.smartworks.dorm.domain.*</value>               
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+            </props>
+        </property>
+    </bean>
+    
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" lazy-init="false">
+		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+		<property name="url" value="jdbc:hsqldb:file:${user.home}/hsql/dormdb/;shutdown=true" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+		<property name="maxActive">
+			<value>50</value>
+		</property>
+		<property name="maxIdle">
+			<value>5</value>
+		</property>
+		<property name="maxWait">
+			<value>-1</value>
+		</property>
+	</bean>
+	
+	<bean id="hsqlTxManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+    
     <bean id="test" class="com.smartworks.test.TestBean" />
+    
+    <tx:annotation-driven transaction-manager="hsqlTxManager"/>
 
 </beans>

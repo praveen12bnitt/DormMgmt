@@ -1,3 +1,4 @@
+<%@page import="com.smartworks.dorm.service.UserRoleService"%>
 <%@page import="com.smartworks.test.TestBean"%>
 <%@page import="com.smartworks.platform.AppContextUtil"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -12,6 +13,10 @@
 <%
 
 TestBean t = AppContextUtil.getBean("test");
+
+UserRoleService serv = AppContextUtil .getBean("userRoleService");
+
+serv.getUser(1);
 
 t.sayHello();
 

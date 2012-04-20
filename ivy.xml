@@ -15,6 +15,8 @@
     <dependencies>		
 		<dependency org="org.springframework" name="spring-web" rev="3.1.1.RELEASE"/>
 		<dependency org="org.springframework" name="spring-webmvc" rev="3.1.1.RELEASE"/>
+		<dependency org="org.springframework" name="spring-orm" rev="3.1.1.RELEASE"/>
+		<dependency org="cglib" name="cglib" rev="2.2.2"/>
 		<dependency org="org.hibernate" name="hibernate-core" rev="3.5.3-Final" conf="runtime" />
 		<dependency org="org.hibernate" name="hibernate-annotations" rev="3.5.3-Final" conf="runtime" />
 		<dependency org="org.hibernate" name="hibernate-validator" rev="4.2.0.Final"/>
@@ -27,5 +29,6 @@
 		<dependency org="org.json" name="json" rev="20090211" />
 		<dependency org="org.apache.velocity" name="velocity" rev="1.7"/>
 		<dependency org="org.apache.poi" name="poi-scratchpad" rev="3.8-beta2"/>
+		<dependency org="hsqldb" name="hsqldb" rev="1.8.0.10"/>
 	</dependencies>
 </ivy-module>
