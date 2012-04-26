@@ -6,7 +6,7 @@
 	http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
 
 	<http auto-config="true" use-expressions="true">
-	     <intercept-url pattern="/ui/**" access="" filters="none"/>
+	    <intercept-url pattern="/ui/**" access="" filters="none"/>
 	    <intercept-url pattern="/images/**" access="" filters="none"/>
 	    <intercept-url pattern="/css/**" access="" filters="none"/>
 	    <intercept-url pattern="/reports/**" access="isAuthenticated()"  />

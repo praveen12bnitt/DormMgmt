@@ -1,0 +1,519 @@
+html 
+{
+}
+
+h1 {
+	color: #025190;
+	font-size: 38px;
+	font-weight: bold;
+	
+	padding: 10px 10px 0 40px;	
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 15px;	
+}
+
+h3 {
+	font-size: 14px;	
+	font-weight: bold;
+	margin-bottom: 15px;
+	padding-left: 40px;
+}
+
+body {
+	font-size: 14px;
+	font-family: Arial, sans-serif;	
+	color: #024B82;
+}
+
+.max-width {
+	width:940px;
+	padding: 0 10px 0 10px;
+	margin-left:auto; 
+	margin-right: auto;
+}
+
+/* used to contain floats in div */
+/* taken from http://www.ejeliot.com/blog/59 */
+.container:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.container { display: inline-block; _height: 1%; }
+/* Hides from IE-mac \*/
+.container { display: block; }
+
+/************************************************************************
+	MENU
+*/
+#menu {
+	background: #11BB82;
+	height: 70px;	
+}
+
+	#menu > div {
+		height: inherit;
+	}
+
+		#logo {	
+			width: 200px;
+			
+			background-image:url('images/srm-group.jpg');
+			background-repeat: no-repeat;
+			
+			color: white;
+			text-decoration:none;
+			text-align: right;
+			
+			font-size: 35px;
+			font-weight: bold;
+			
+			padding: 15px 10px 0px 0px;	
+			float: left;
+		}
+
+		#primary_nav {
+			margin-right: 30px;
+			float: right;
+		}
+
+			#primary_nav li {
+				float: left;
+				padding: 17px 0px 10px 0px;
+			}
+
+				#primary_nav ul li a {
+					padding: 10px;
+					font-size:14px;
+					color:white;
+					text-decoration: none;
+					float:left;
+				}
+
+		#signup_links {
+			margin-right: 20px;
+			float: right;
+		}
+
+			#signup_links li {
+				float: left;
+				padding: 17px 0px 10px 0px;	
+			}
+
+				#signup_links ul li a {
+					font-size:14px;
+					color: #BBFC3C;
+					text-decoration: none;
+					
+					padding: 10px;				
+					
+					float:left;
+				}
+
+/***********************************************************************
+	Footer
+*/
+#footer {
+	background: #E8EBEE;	
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+	#footer-links {	
+	}
+	
+	#footer-links ul li{
+		width: 230px;
+		float: left;
+		margin-bottom: 0.2em;		
+	}
+
+	#footer-links ul li ul{
+		width: 235px;
+	}
+
+	#policy-links {		
+		margin-top: 17px;		
+	}
+
+	
+/***********************************************************************
+	Login Form
+*/	
+
+#login-form {
+	background: #F7F7F7;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#login-form > div > div{
+	background-color: #F7F7F7;
+	width: 600px;
+	
+	
+	padding-bottom: 40px;
+	border: 2px #025190 solid;
+	border-radius: 2px;
+	moz-border-radius: 2px;
+}
+
+#line {
+	width: inherit;
+	border: 1px #025190 solid;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#login-form  a{
+	font-size: 14px;
+}
+
+#login-form [name="submit"]{
+	font-size: 16px;
+}
+
+
+
+label[for="login"], label[for="password"]{
+	font-size: 18px;
+	font-weight: bold;
+	color: #025190;
+	margin: 40px;
+}
+
+input {
+	margin-left: 40px;
+}
+
+select {
+	margin-left: 40px;
+}
+
+textarea {
+	margin-left: 40px;
+}
+
+div[style="color: red;"] 
+{
+	margin-left: 40px;
+}
+
+div input[name] {	
+	margin-top: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+table {
+	margin-left: 40px;
+}
+
+/*************************************************/
+
+.grouped_elements {
+	width: inherit;
+	border: 1px solid #CCC;	
+	margin: 8px;
+	padding: 5px 10px 5px 10px;
+	background-color: #F7F7F7;
+}
+
+/*************************************************/
+
+#balance_amount { 
+	display:inline; 
+	font-weight:bold;	
+}
+
+/*************************************************/
+
+.grouped_elements table table{
+	border-collapse:separate;
+	border-spacing:0px 3px;
+}
+
+#booking_dialog_buttons {
+	position: absolute;
+	bottom: 0;
+	right: 0;	
+}
+
+.action_button {
+	margin-right: 15px;
+}
+
+#close_button {
+	width: 80px;
+}
+
+
+/*********************************************************/
+
+#menu{
+	padding-top: 10px;
+	background: #025190;
+	/*#025190 */
+}
+
+#main-logo {
+	
+	
+	background: url('../images/logo-big.jpg') no-repeat;
+	font-size:4.75em;
+	font-weight: bold;
+	
+	text-align: right;
+	color:#FFFFFF;
+	
+	display: block;
+	float: left;
+}
+
+
+a:link#main-logo{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+a:visited#main-logo{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+a:hover#main-logo {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+a:active#main-logo {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+/*******************************/
+/* --- session_nav section --- */
+/*******************************/
+#session-nav {
+	width: 450px;
+	
+	color: #FFFFFF;
+	
+	float: right;
+}
+
+#session-nav ul {	
+	float: right;
+}
+
+#session-nav li
+{	
+	float:left;
+}
+
+#session-nav a {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#user-email {	
+	font-weight: bold;
+}
+
+/***************************************/
+/* --- company information section --- */
+
+/***************************************/
+#company-info {	
+	width: 450px; /*arbitrary size to fit all info */
+	
+	margin-top: 15px;
+	
+	color: #FFFFFF;
+	
+	float:right;
+}
+
+#company-info ul{
+	float:right;
+}
+
+#company-info li{
+	float:right;
+}
+
+#company-info a {	
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#current-hotel {	
+	width: 221px;	
+}
+
+#selling-date {
+	font-weight: bold;
+	margin-top: .5em;
+}
+
+#run-night-audit-button {
+	font-weight: normal;
+}
+
+/***************************************/
+/* --- night audit section --- */
+
+/***************************************/
+
+#dialogNightAudit{
+	text-align: center;
+	display: none;
+}
+
+/***************************************/
+/* --- menu nav section --- */
+
+/***************************************/
+#menu-nav {
+	margin-top: 42px;
+	width: 500px; /*arbitrary size to fit all tabs */
+	
+	float:left;
+}
+
+#menu-nav li
+{	
+	float:left;
+}
+
+#menu-nav a{
+	margin: 0 1px 0 2px;
+	padding: 6px 13px 6px 13px;
+		
+	font-size: 1em;
+	font-weight: bold;
+	
+	background: #0E7ECE;
+	
+	display:block;
+}
+
+#menu-nav .selected-menu#bookings-tab {
+	color: #000000;
+	background: #FFFFFF;
+}
+
+#menu-nav .selected-menu#customers-tab {
+	color: #000000;
+	background: #FFFFFF;
+}
+
+#menu-nav .selected-menu#rooms-tab {
+	color: #000000;
+	background: #FFFFFF;
+}
+
+#menu-nav .selected-menu#reports-tab {
+	color: #000000;
+	background: #BFDCF3;
+}
+
+
+
+/***************************************/
+
+#dialog-timeout {
+	text-align: center;
+	display: none;
+}
+
+#menu-nav a:link {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+#menu-nav a:visited {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+#menu-nav a:hover {
+	color:#FFFFFF;
+	background: #1184D9;
+	text-decoration:none;
+}
+#menu-nav a:active {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+
+
+
+
+/* ============================================================================================================================
+== BUBBLE WITH A BORDER AND TRIANGLE
+** ============================================================================================================================ */
+
+/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-border {
+	position:absolute;
+	margin-top: 5px;
+	padding:4px;
+	color:red;
+	background:#fff;
+	text-align: center;
+	/* css3 */
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	z-index: 10;
+}
+
+/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+/* creates the smaller  triangle */
+
+
+.triangle-border:after {
+	content:"";
+	position:absolute;
+	bottom:-13px; /* value = - border-top-width - border-bottom-width */
+	left:47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+	border-width:13px 13px 0;
+	border-style:solid;
+	border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+
+/* creates the smaller  triangle */
+.triangle-border.top:after {
+	top:-10px; /* value = - border-top-width - border-bottom-width */
+	bottom:auto;
+	left:auto;
+	right:190px; /* value = (:before right) + (:before border-right) - (:after border-right) */
+    border-width:0 13px 13px;
+}
+
+input[type="submit"] {
+background-color: #196A80;
+padding: 7px 25px;
+font-size: 17px;
+color: white;
+border: none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-o-border-radius: 4px;
+-ms-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: 0 0 10px #555 inset;
+-moz-box-shadow: 0 0 10px #555 inset;
+-o-box-shadow: 0 0 10px #555 inset;
+-ms-box-shadow: 0 0 10px #555 inset;
+box-shadow: 0 0 10px #555 inset;
+cursor: pointer;
+float: right;
+margin-right: 20px;
+}

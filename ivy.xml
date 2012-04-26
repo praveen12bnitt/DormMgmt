@@ -16,6 +16,9 @@
 		<dependency org="org.springframework" name="spring-web" rev="3.1.1.RELEASE"/>
 		<dependency org="org.springframework" name="spring-webmvc" rev="3.1.1.RELEASE"/>
 		<dependency org="org.springframework" name="spring-orm" rev="3.1.1.RELEASE"/>
+		<dependency org="org.springframework.security" name="spring-security-web" rev="3.1.0.RELEASE"/>
+		<dependency org="org.springframework.security" name="spring-security-taglibs" rev="3.1.0.RELEASE"/>
+		<dependency org="org.springframework.security" name="spring-security-acl" rev="3.1.0.RELEASE"/>
 		<dependency org="cglib" name="cglib" rev="2.2.2"/>
 		<dependency org="org.hibernate" name="hibernate-core" rev="3.5.3-Final" conf="runtime" />
 		<dependency org="org.hibernate" name="hibernate-annotations" rev="3.5.3-Final" conf="runtime" />
