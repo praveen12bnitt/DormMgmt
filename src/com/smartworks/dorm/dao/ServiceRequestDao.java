@@ -15,4 +15,8 @@ public class ServiceRequestDao extends AbstractDao {
 	public void update(ServiceRequest sr) {
 		sessionFactory.getCurrentSession().update(sr);
 	}
+	
+	public ServiceRequest load(Integer srNumber) {
+		return (ServiceRequest) sessionFactory.getCurrentSession().load(ServiceRequest.class, srNumber);
+	}
 }
