@@ -18,11 +18,7 @@
         <property name="schemaUpdate">
 			<value>true</value>
 		</property>
-        <property name="packagesToScan">
-            <list>
-                <value>com.smartworks.dorm.domain.*</value>               
-            </list>
-        </property>
+		<property name="packagesToScan" value="com.smartworks.dorm.domain"/>
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.show_sql">true</prop>
@@ -33,7 +29,7 @@
     
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" lazy-init="false">
 		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
-		<property name="url" value="jdbc:hsqldb:file:${user.home}/hsql/dormdb/;shutdown=true" />
+		<property name="url" value="jdbc:hsqldb:file:dormdb;shutdown=true" />
 		<property name="username" value="sa" />
 		<property name="password" value="" />
 		<property name="maxActive">

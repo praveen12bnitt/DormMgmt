@@ -20,7 +20,6 @@ import org.hibernate.annotations.Proxy;
 @Entity
 @Table(name="USERS")
 @Proxy(lazy=false)
-
 public class User implements Serializable {
 	
 	
