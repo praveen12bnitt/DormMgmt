@@ -17,5 +17,9 @@ public class UserRoleService {
 	public User getUser(Integer userId) {
 		return userRoleDao.loadUser(userId);
 	}
+	
+	public Integer addUser(User u) {
+		return userRoleDao.addUser(u);
+	}
 
 }

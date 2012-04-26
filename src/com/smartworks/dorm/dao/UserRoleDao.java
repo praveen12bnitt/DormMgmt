@@ -13,4 +13,9 @@ public class UserRoleDao extends AbstractDao {
 		return user;
 	}
 	
+	public Integer addUser(User user) {
+		Integer userId = (Integer) sessionFactory.getCurrentSession().save(user);
+		return userId;
+	}
+	
 }
