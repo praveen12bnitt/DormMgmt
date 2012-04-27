@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.smartworks.dorm.dao.UserRoleDao;
 import com.smartworks.dorm.domain.User;
+import com.smartworks.dorm.domain.UserRole;
 
 @Component
 @Transactional
@@ -20,6 +21,10 @@ public class UserRoleService {
 	
 	public Integer addUser(User u) {
 		return userRoleDao.addUser(u);
+	}
+	
+	public void addUserRole(UserRole role) {
+		userRoleDao.addUserRole(role);
 	}
 
 }

@@ -13,6 +13,17 @@
 <script type="text/javascript" src='<c:url value="/js/jquery-1.5.1.min.js" />'></script>
 <script type="text/javascript" src='<c:url value="/js/home.1334201885.js" />'></script>
 </head>
+
+<%
+
+String msg = "";
+String type = request.getParameter("type");
+if(type != null && type.equals("fail")) {
+	msg = "<div style=\"color: red;\">Failed to authenticate. Username/Password combination is not correct</div>";
+} else if(type != null && type.equals("logout")) {
+	msg = "<div style=\"color: green;\">Successfully logged out of the system</div>";
+}
+%>
 <body>
 
 	<div id="menu">
@@ -38,21 +49,21 @@
 								<div id="line"></div>
 
 								<div style="color: red;"></div>
-								<form action="#" method="post" accept-charset="utf-8">
+								<form action="<c:url value='/j_spring_security_check' />" method="post" accept-charset="utf-8">
 
 									<label for="login">Username</label>
 									<div>
-										<input type="text" name="login" value="" id="login"
+										<input type="text" name="j_username" value="" id="login"
 											maxlength="80" size="30" />
 									</div>
 									<div style="color: red;"></div>
 
 									<br /> <label for="password">Password</label>
 									<div>
-										<input type="password" name="password" value="" id="password"
+										<input type="password" name="j_password" value="" id="password"
 											size="30" />
 									</div>
-									<div style="color: red;"></div>
+									<%= msg %>
 
 									<table>
 

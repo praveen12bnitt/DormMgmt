@@ -3,6 +3,7 @@ package com.smartworks.dorm.dao;
 import org.springframework.stereotype.Repository;
 
 import com.smartworks.dorm.domain.User;
+import com.smartworks.dorm.domain.UserRole;
 
 @Repository
 public class UserRoleDao extends AbstractDao {
@@ -16,6 +17,10 @@ public class UserRoleDao extends AbstractDao {
 	public Integer addUser(User user) {
 		Integer userId = (Integer) sessionFactory.getCurrentSession().save(user);
 		return userId;
+	}
+	
+	public void addUserRole(UserRole role) {
+		sessionFactory.getCurrentSession().save(role);
 	}
 	
 }

@@ -1,3 +1,4 @@
+<%@page import="com.smartworks.dorm.domain.UserRole"%>
 <%@page import="com.smartworks.dorm.domain.User"%>
 <%@page import="com.smartworks.dorm.service.UserRoleService"%>
 <%@page import="com.smartworks.test.TestBean"%>
@@ -19,7 +20,15 @@ user.setPassword("password");
 user.setEnabled(true);
 
 UserRoleService userServ = AppContextUtil.getBean("userRoleService");
-userServ.addUser(user);
+Integer userId = userServ.addUser(user);
+user.setUserid(userId);
+
+UserRole userRole = new UserRole();
+userRole.setRoleName("AUTHENTICATED");
+userRole.setUser(user);
+
+userServ.addUserRole(userRole);
+
 
 %>
 </body>

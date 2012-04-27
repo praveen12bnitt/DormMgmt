@@ -7,19 +7,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Dorm Mgmt Welcome Page </title>
 </head>
 <body>
-<%
-
-TestBean t = AppContextUtil.getBean("test");
-
-UserRoleService serv = AppContextUtil .getBean("userRoleService");
-
-serv.getUser(1);
-
-t.sayHello();
-
-%>
+<h1>
+Welcome to Drom Mgmt!
+</h1>
 </body>
 </html>
