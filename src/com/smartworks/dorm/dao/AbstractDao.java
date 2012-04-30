@@ -3,7 +3,8 @@ package com.smartworks.dorm.dao;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class AbstractDao {
+
+public class AbstractDao  {
 
 	@Autowired
 	SessionFactory sessionFactory;
@@ -15,5 +16,7 @@ public class AbstractDao {
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
+	
+	
 	
 }
