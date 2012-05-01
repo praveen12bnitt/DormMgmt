@@ -14,10 +14,12 @@
 
 <%
 
-//DataExporter.exportData("employee");
+DataExporter.exportData("employee");
 
-TDataList dataList = DataExporter.importData("employee");
-out.println(dataList.getListObjects().size());
+/**TDataList dataList = DataExporter.importData("employee");
+out.println(dataList.getListObjects().size());*/
+
+out.println(new java.io.File("data.out").getCanonicalPath());
 
 %>
 </body>

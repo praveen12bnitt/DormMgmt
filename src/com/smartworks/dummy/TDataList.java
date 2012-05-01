@@ -13,8 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "DataList")
 public class TDataList {
 	
-	@XmlElementWrapper(name="employeeList")
-    @XmlElement(name = "employee", required = true)
+	@XmlElement(name = "employee", required = true)
 	private List<TEmployee> listObjects;
 
 	public List<TEmployee> getListObjects() {
