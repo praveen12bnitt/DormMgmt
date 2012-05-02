@@ -34,5 +34,6 @@
 		<dependency org="org.apache.velocity" name="velocity" rev="1.7"/>
 		<dependency org="org.apache.poi" name="poi-scratchpad" rev="3.8-beta2"/>
 		<dependency org="hsqldb" name="hsqldb" rev="1.8.0.10"/>
+		<dependency org="com.sun.xml.bind" name="jaxb-impl" rev="2.1.4"/>
 	</dependencies>
 </ivy-module>
