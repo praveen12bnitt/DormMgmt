@@ -13,6 +13,10 @@ import org.hibernate.annotations.Proxy;
 public class Dormitory {
 
 	@Id
+	@Column(name="CODE")
+	String code;
+	
+	@Column(name="NAME")
 	String name;
 	
 	@Column(name="LOCATION")
@@ -54,6 +58,16 @@ public class Dormitory {
 
 	public void setNumberOfRooms(Integer numberOfRooms) {
 		this.numberOfRooms = numberOfRooms;
-	}	
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	
 	
 }

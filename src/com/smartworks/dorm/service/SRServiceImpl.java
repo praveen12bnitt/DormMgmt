@@ -9,7 +9,7 @@ import com.smartworks.dorm.domain.ServiceRequest;
 
 @Component
 @Transactional
-public class ServiceRequestService {
+public class SRServiceImpl implements SRService {
 
 	@Autowired
 	ServiceRequestDao serviceRequestDao;
@@ -20,5 +20,9 @@ public class ServiceRequestService {
 	
 	public void update(ServiceRequest sr) {
 		serviceRequestDao.update(sr);
+	}
+	
+	public ServiceRequest load(Integer srNumber) {
+		return serviceRequestDao.load(srNumber);
 	}
 }

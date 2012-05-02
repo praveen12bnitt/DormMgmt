@@ -1,3 +1,5 @@
+<%@page import="com.smartworks.dorm.domain.Dormitory"%>
+<%@page import="com.smartworks.dorm.service.DormService"%>
 <%@page import="com.smartworks.dorm.domain.UserRole"%>
 <%@page import="com.smartworks.dorm.domain.User"%>
 <%@page import="com.smartworks.dorm.service.UserRoleService"%>
@@ -28,6 +30,30 @@ userRole.setRoleName("AUTHENTICATED");
 userRole.setUser(user);
 
 userServ.addUserRole(userRole);
+
+DormService dormServ = AppContextUtil.getBean("dormServiceImpl");
+
+Dormitory dorm = new Dormitory();
+dorm.setCode("B185");
+dorm.setName("Building 185");
+dormServ.create(dorm);
+
+
+dorm = new Dormitory();
+dorm.setCode("B186");
+dorm.setName("Building 186");
+dormServ.create(dorm);
+
+dorm = new Dormitory();
+dorm.setCode("B187");
+dorm.setName("Building 187");
+dormServ.create(dorm);
+
+
+dorm = new Dormitory();
+dorm.setCode("B71");
+dorm.setName("Building 71");
+dormServ.create(dorm);
 
 
 %>
