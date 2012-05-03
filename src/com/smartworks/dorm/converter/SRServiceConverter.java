@@ -17,6 +17,7 @@ public class SRServiceConverter {
 		sr.setLocation(srForm.getLocation());
 		sr.setRemarks(srForm.getRemarks());
 		sr.setRoomNumber(srForm.getRoom());
+		sr.setId(srForm.getSrNumber());
 		return sr;
 	}
 	
@@ -30,7 +31,7 @@ public class SRServiceConverter {
 		srForm.setLocation(sr.getLocation());
 		srForm.setRemarks(sr.getRemarks());
 		srForm.setRoom(sr.getRoomNumber());
-		srForm.setSrNumber(sr.getId().toString());
+		srForm.setSrNumber(sr.getId());
 		return srForm;
 	}
 	

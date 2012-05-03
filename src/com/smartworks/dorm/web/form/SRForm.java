@@ -8,7 +8,7 @@ public class SRForm {
 	
 	String mode="new";
 	
-	String srNumber;	
+	Integer srNumber;	
 	String date;
 	String dorm;
 	String room;
@@ -24,10 +24,10 @@ public class SRForm {
 		Date dateObj = new Date();
 		date = sdf.format(dateObj);
 	}
-	public String getSrNumber() {
+	public Integer getSrNumber() {
 		return srNumber;
 	}
-	public void setSrNumber(String srNumber) {
+	public void setSrNumber(Integer srNumber) {
 		this.srNumber = srNumber;
 	}
 	public String getDate() {

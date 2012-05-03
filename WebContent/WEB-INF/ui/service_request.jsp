@@ -8,15 +8,15 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css"
-	href='<c:url value="css/reset-min.css" />' />
+	href='<c:url value="/css/reset-min.css" />' />
 <link type="text/css" rel="stylesheet"
-	href='<c:url value="css/reset-min.css" />' />
+	href='<c:url value="/css/reset-min.css" />' />
 <link rel="stylesheet" type="text/css"
-	href='<c:url value="css/style.css" />' />
+	href='<c:url value="/css/style.css" />' />
 <script type="text/javascript"
-	src='<c:url value="js/jquery-1.5.1.min.js" />'></script>
+	src='<c:url value="/js/jquery-1.5.1.min.js" />'></script>
 <script type="text/javascript"
-	src='<c:url value="js/home.1334201885.js" />'></script>
+	src='<c:url value="/js/home.1334201885.js" />'></script>
 </head>
 
 <body>
@@ -28,13 +28,12 @@
 					<li><a href="reservation.htm">Reservation</a></li>
 					<li><a href="housekeeping.html">House Keeping</a></li>
 					<li><a class="selected-menu" id="customers-tab"
-						href="service_request.html">Service Request</a></li>
+						href='<c:url value="/SR.form" />'>Service Request</a></li>
 					<li><a href="#">Reports</a></li>
 
 				</ul>
 			</div>
 		</div>
-
 	</div>
 	<div class="max-width">
 		<div class="container">
