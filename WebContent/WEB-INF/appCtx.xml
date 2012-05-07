@@ -10,6 +10,7 @@
         http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
         
     <context:component-scan base-package="com.smartworks.*" /> 
+    <context:annotation-config/>
     
     <bean id="appCtxHolder" class="com.smartworks.platform.AppContextHolder"  />
     
@@ -50,6 +51,11 @@
     
     <bean id="test" class="com.smartworks.test.TestBean" />
     
-    <tx:annotation-driven transaction-manager="hsqlTxManager"/>
+    <!-- <bean id="dormService" class="com.smartworks.dorm.service.DormServiceImpl" /> -->
+    
+    
+    
+    <tx:annotation-driven transaction-manager="hsqlTxManager" proxy-target-class="true" />
+    
 
 </beans>

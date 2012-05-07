@@ -1,5 +1,8 @@
 package com.smartworks.dorm.dao;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
 import com.smartworks.dorm.domain.ServiceRequest;
@@ -18,5 +21,11 @@ public class ServiceRequestDao extends AbstractDao {
 	
 	public ServiceRequest load(Integer srNumber) {
 		return (ServiceRequest) sessionFactory.getCurrentSession().load(ServiceRequest.class, srNumber);
+	}
+	
+	public List<ServiceRequest> loadAll() {
+		String sql = "from ServiceRequest";		
+		Query query = sessionFactory.getCurrentSession().createQuery(sql);
+		return query.list();
 	}
 }

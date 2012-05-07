@@ -69,7 +69,10 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="grouped_elements">List Service request</div>
+			<div class="grouped_elements">
+			<a href='<c:url value="/SR/list.form" />'>List Service request</a>
+			
+			</div>
 
 
 		</div>

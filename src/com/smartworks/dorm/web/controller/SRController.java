@@ -82,6 +82,15 @@ public class SRController {
 		return model1;
 	}
 	
+	@RequestMapping(value="/list.form" , method = RequestMethod.GET)
+	public ModelAndView list() {
+		ModelAndView model1 = new ModelAndView("srlist");
+		SRService srService = AppContextUtil.getBean("SRServiceImpl");		
+		List<ServiceRequest> srs = srService.loadAll();
+		model1.addObject("srList", srs);		
+		return model1;
+	}
+	
 	
 	
 	

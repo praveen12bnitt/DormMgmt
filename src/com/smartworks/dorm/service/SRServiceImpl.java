@@ -1,5 +1,7 @@
 package com.smartworks.dorm.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,5 +26,9 @@ public class SRServiceImpl implements SRService {
 	
 	public ServiceRequest load(Integer srNumber) {
 		return serviceRequestDao.load(srNumber);
+	}
+	
+	public List<ServiceRequest> loadAll() {
+		return serviceRequestDao.loadAll();
 	}
 }
